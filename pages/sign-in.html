@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members Sign In - BusinessList.pk</title>
+    <link rel="stylesheet" href="sign-in.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="description" content="Sign in to your BusinessList.pk account to access exclusive features and manage your business listings.">
+    <script src="sign-in.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%20%2874%29-b4G4KtwrjVnz7Uib0EpT0diOJrVZGf.png" alt="BusinessList.pk" class="logo-img">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="signin-container">
+                <div class="signin-form-wrapper">
+                    <h1 class="signin-title">Members Sign In</h1>
+                    
+                    <form class="signin-form" id="signinForm">
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <i class="input-icon user-icon"></i>
+                                <input 
+                                    type="text" 
+                                    id="username" 
+                                    name="username" 
+                                    placeholder="Username"
+                                    required
+                                    autocomplete="username"
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <i class="input-icon lock-icon"></i>
+                                <input 
+                                    type="password" 
+                                    id="password" 
+                                    name="password" 
+                                    placeholder="Password"
+                                    required
+                                    autocomplete="current-password"
+                                >
+                                <button type="button" class="password-toggle" id="passwordToggle">
+                                    <i class="eye-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="signin-btn" id="signinBtn">
+                            <span class="btn-text">SIGN IN</span>
+                            <div class="btn-loader" id="btnLoader"></div>
+                        </button>
+                    </form>
+
+                    <div class="form-links">
+                        <a href="forgot-password.html" class="forgot-link">Forgot password?</a>
+                    </div>
+
+                    <div class="signup-prompt">
+                        <span>Not a Member Yet? </span>
+                        <a href="sign-up.html" class="signup-link">Sign up</a>
+                    </div>
+
+                    <!-- Success/Error Messages -->
+                    <div class="message-container" id="messageContainer"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="contact-us.html">Contact us</a>
+                <a href="terms.html">Terms of use</a>
+                <a href="cookies.html">Cookies policy</a>
+                <a href="privacy.html">Privacy policy</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
