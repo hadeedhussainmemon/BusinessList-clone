@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Account Registration - premium | BusinessList.pk</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <span class="logo-text" onclick="window.location = '/index.html'">business list</span>
+                </div>
+                <nav class="nav-menu">
+                    <a href="#" class="nav-link">Sign in</a>
+                    <button class="get-listed-btn">Get Listed</button>
+                    <button class="search-icon-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="/" class="breadcrumb-link">Pakistan</a>
+                <span class="breadcrumb-separator">/</span>
+                <a href="/pages/create-business-listing.html" class="breadcrumb-link">Get Listed</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current">premium Member</span>
+            </nav>
+
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">Business Account Registration - premium</h1>
+                <p class="page-description">
+                    Complete the fields below to create your account. Your account details will be sent to the email
+                    address you provide. Rest assured, your email address and personal information will remain private
+                    and will not be shared or sold to any third party.
+                </p>
+            </div>
+
+            <!-- Registration Form -->
+            <form class="registration-form" id="registrationForm">
+                <!-- Contact Information -->
+                <section class="form-section">
+                    <h2 class="section-title">Contact Information</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName" class="form-label">Name <span class="required">*</span></label>
+                            <input type="text" id="firstName" name="firstName" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName" class="form-label">Last Name <span class="required">*</span></label>
+                            <input type="text" id="lastName" name="lastName" class="form-input" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                </section>
+
+                <!-- Account Information -->
+                <section class="form-section">
+                    <h2 class="section-title">Account Information</h2>
+                    <div class="form-group">
+                        <label for="username" class="form-label">Username <span class="required">*</span></label>
+                        <input type="text" id="username" name="username" class="form-input" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="password" class="form-label">Password <span class="required">*</span></label>
+                            <input type="password" id="password" name="password" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword" class="form-label">Password (re-type) <span
+                                    class="required">*</span></label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" class="form-input"
+                                required>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Membership -->
+                <section class="form-section">
+                    <h2 class="section-title">Membership</h2>
+                    <div class="membership-card">
+                        <div class="discount-badge">-40%</div>
+                        <div class="membership-content">
+                            <h3 class="membership-title">premium</h3>
+                            <div class="membership-price">
+                                <span class="price-main">42</span>
+                                <span class="price-currency">USD</span>
+                                <span class="price-original">70USD</span>
+                            </div>
+                            <div class="membership-badges">
+                                <span class="membership-badge">Per Year</span>
+                                <div class="membership-note">Subscription</div>
+                            </div>
+                            <button type="button" class="show-more-btn" id="showMoreBtn">
+                                SHOW MORE <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="membership-details" id="membershipDetails">
+                                <ul class="features-list">
+                                    <li><i class="fas fa-check"></i> Highlighted listing</li>
+                                    <li><i class="fas fa-check"></i> Top listing placement on:</li>
+                                    <li class="sub-feature"><i class="fas fa-circle"></i> Search results</li>
+                                    <li class="sub-feature"><i class="fas fa-circle"></i> Selected categories</li>
+                                    <li class="sub-feature"><i class="fas fa-circle"></i> Listed keywords</li>
+                                </ul>
+                                <div class="membership-stats">
+                                    <span class="stat">6 Categories</span>
+                                    <span class="stat">10 Keywords</span>
+                                </div>
+                                <div class="membership-stats">
+                                    <span class="stat">15 Photos</span>
+                                    <span class="stat">20 Products</span>
+                                </div>
+                                <div class="membership-stats">
+                                    <span class="stat">30 Job Offers</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Payment Method -->
+                <section class="form-section">
+                    <h2 class="section-title">Payment method</h2>
+                    <div class="payment-options">
+                        <div class="payment-option selected">
+                            <input type="radio" id="paypal" name="paymentMethod" value="paypal" checked>
+                            <label for="paypal" class="payment-label">
+                                <div class="payment-content">
+                                    <img src="/img/paypal.png?height=20&width=32" alt="PayPal" class="paypal-logo">
+                                    <div class="credit-cards">
+                                        <img src="/img/master-card.png" alt="MasterCard" class="card-logo">
+                                        <img src="/img/American-express.png" alt="American Express" class="card-logo">
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="payment-note">
+                        <i class="fas fa-info-circle"></i>
+                        After clicking "CREATE ACCOUNT", you will be redirected to <strong>Paypal</strong> payment
+                        website to complete your purchase securely.
+                    </div>
+                </section>
+
+                <!-- Human Verification -->
+                <section class="form-section">
+                    <h2 class="section-title">Confirm that you are human <span class="required">*</span></h2>
+                    <div class="recaptcha-container">
+                        <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+                    </div>
+                </section>
+
+                <!-- Terms Agreement -->
+                <section class="form-section">
+                    <div class="terms-agreement">
+                        <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                        <label for="agreeTerms" class="terms-label">
+                            I agree to the <a href="#" class="terms-link">Terms of Service</a> & <a href="#"
+                                class="terms-link">Privacy Policy</a>
+                        </label>
+                    </div>
+                </section>
+
+                <!-- Form Actions -->
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" id="backBtn">BACK</button>
+                    <button type="submit" class="btn btn-primary" id="createAccountBtn">CREATE ACCOUNT</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Pakistan Updates</h4>
+                    <ul>
+                        <li><a href="#">Our Global Network</a></li>
+                        <li><a href="#">Public Holidays in Pakistan</a></li>
+                        <li><a href="#">Articles</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Users</h4>
+                    <ul>
+                        <li><a href="#">Get Listed</a></li>
+                        <li><a href="#">Remove Company</a></li>
+                        <li><a href="#">Sign in</a></li>
+                    </ul>
+                    <div class="support-section">
+                        <p>Need help?<br>Contact our support team</p>
+                        <button class="btn btn-support">Support</button>
+                    </div>
+                </div>
+                <div class="footer-column footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">business list</span>
+                    </div>
+                    <p class="footer-description">
+                        BusinessList.pk is Pakistan's online business directory, helping people discover local
+                        businesses near you. Join our community to promote your business and effectively reach your
+                        target audience.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-stats">
+                <h4>Pakistan Network Database</h4>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">155,414</div>
+                        <div class="stat-label">Companies</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1,718</div>
+                        <div class="stat-label">Reviews</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">27,310</div>
+                        <div class="stat-label">Photos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">16,014</div>
+                        <div class="stat-label">Products</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>By continuing past this page, you agree to our
+                    <a href="#">Terms of use</a>,
+                    <a href="#">Cookies policy</a>,
+                    <a href="#">Privacy policy</a>,
+                    <a href="#">Terms of service</a>.© 2009 - 2025 BusinessList.pk (PRO2)
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
