@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -19,7 +21,7 @@
                 </div>
                 <nav class="nav-menu">
                     <a href="#" class="nav-link">Sign in</a>
-                    <button class="get-listed-btn">Get Listed</button>
+                    <button class="get-listed-btn" onclick="window.location = '/pages/create-business-listing.html'">Get Listed</button>
                     <button class="search-icon-btn">
                         <i class="fas fa-search"></i>
                     </button>
@@ -47,7 +49,9 @@
             <div class="page-header">
                 <h1 class="page-title">Business Account Registration - LIFETIME</h1>
                 <p class="page-description">
-                    Complete the fields below to create your account. Your account details will be sent to the email address you provide. Rest assured, your email address and personal information will remain private and will not be shared or sold to any third party.
+                    Complete the fields below to create your account. Your account details will be sent to the email
+                    address you provide. Rest assured, your email address and personal information will remain private
+                    and will not be shared or sold to any third party.
                 </p>
             </div>
 
@@ -85,8 +89,10 @@
                             <input type="password" id="password" name="password" class="form-input" required>
                         </div>
                         <div class="form-group">
-                            <label for="confirmPassword" class="form-label">Password (re-type) <span class="required">*</span></label>
-                            <input type="password" id="confirmPassword" name="confirmPassword" class="form-input" required>
+                            <label for="confirmPassword" class="form-label">Password (re-type) <span
+                                    class="required">*</span></label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" class="form-input"
+                                required>
                         </div>
                     </div>
                 </section>
@@ -95,43 +101,43 @@
                 <section class="form-section">
                     <h2 class="section-title">Membership</h2>
                     <div class="membership-card">
-    <div class="discount-badge">-40%</div>
-    <div class="membership-content">
-        <h3 class="membership-title">LIFETIME</h3>
-        <div class="membership-price">
-            <span class="price-main">90</span>
-            <span class="price-currency">USD</span>
-            <span class="price-original">150USD</span>
-        </div>
-        <div class="membership-badges">
-            <span class="membership-badge">one time fee</span>
-            <div class="membership-note">never pay again</div>
-        </div>
-        <button type="button" class="show-more-btn" id="showMoreBtn">
-            SHOW LESS <i class="fas fa-chevron-up"></i>
-        </button>
-        <div class="membership-details show" id="membershipDetails">
-            <ul class="features-list">
-                <li><i class="fas fa-check"></i> Highlighted listing</li>
-                <li><i class="fas fa-check"></i> Top listing placement on:</li>
-                <li class="sub-feature"><i class="fas fa-circle"></i> Search results</li>
-                <li class="sub-feature"><i class="fas fa-circle"></i> Selected categories</li>
-                <li class="sub-feature"><i class="fas fa-circle"></i> Listed keywords</li>
-            </ul>
-            <div class="membership-stats">
-                <span class="stat">8 Categories</span>
-                <span class="stat">15 Keywords</span>
-            </div>
-            <div class="membership-stats">
-                <span class="stat">100 Photos</span>
-                <span class="stat">100 Products</span>
-            </div>
-            <div class="membership-stats">
-                <span class="stat">100 Job Offers</span>
-            </div>
-        </div>
-    </div>
-</div>
+                        <div class="discount-badge">-40%</div>
+                        <div class="membership-content">
+                            <h3 class="membership-title">LIFETIME</h3>
+                            <div class="membership-price">
+                                <span class="price-main">90</span>
+                                <span class="price-currency">USD</span>
+                                <span class="price-original">150USD</span>
+                            </div>
+                            <div class="membership-badges">
+                                <span class="membership-badge">one time fee</span>
+                                <div class="membership-note">never pay again</div>
+                            </div>
+                            <button type="button" class="show-more-btn" id="showMoreBtn">
+                                SHOW LESS <i class="fas fa-chevron-up"></i>
+                            </button>
+                            <div class="membership-details show" id="membershipDetails">
+                                <ul class="features-list">
+                                    <li><i class="fas fa-check"></i> Highlighted listing</li>
+                                    <li><i class="fas fa-check"></i> Top listing placement on:</li>
+                                    <li class="sub-feature"><i class="fas fa-circle"></i> Search results</li>
+                                    <li class="sub-feature"><i class="fas fa-circle"></i> Selected categories</li>
+                                    <li class="sub-feature"><i class="fas fa-circle"></i> Listed keywords</li>
+                                </ul>
+                                <div class="membership-stats">
+                                    <span class="stat">8 Categories</span>
+                                    <span class="stat">15 Keywords</span>
+                                </div>
+                                <div class="membership-stats">
+                                    <span class="stat">100 Photos</span>
+                                    <span class="stat">100 Products</span>
+                                </div>
+                                <div class="membership-stats">
+                                    <span class="stat">100 Job Offers</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <!-- Payment Method -->
@@ -153,7 +159,8 @@
                     </div>
                     <div class="payment-note">
                         <i class="fas fa-info-circle"></i>
-                        After clicking "CREATE ACCOUNT", you will be redirected to <strong>Paypal</strong> payment website to complete your purchase securely.
+                        After clicking "CREATE ACCOUNT", you will be redirected to <strong>Paypal</strong> payment
+                        website to complete your purchase securely.
                     </div>
                 </section>
 
@@ -170,7 +177,8 @@
                     <div class="terms-agreement">
                         <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
                         <label for="agreeTerms" class="terms-label">
-                            I agree to the <a href="#" class="terms-link">Terms of Service</a> & <a href="#" class="terms-link">Privacy Policy</a>
+                            I agree to the <a href="#" class="terms-link">Terms of Service</a> & <a href="#"
+                                class="terms-link">Privacy Policy</a>
                         </label>
                     </div>
                 </section>
@@ -199,21 +207,24 @@
                 <div class="footer-column">
                     <h4>Users</h4>
                     <ul>
-                        <li><a href="#">Get Listed</a></li>
+                        <li><a href="../create-business-listing.html">Get Listed</a></li>
                         <li><a href="#">Remove Company</a></li>
-                        <li><a href="#">Sign in</a></li>
+                        <li><a href="../sign-in.html">Sign in</a></li>
                     </ul>
                     <div class="support-section">
                         <p>Need help?<br>Contact our support team</p>
-                        <button class="btn btn-support" onclick="window.location = '../contact-us.html'">Support</button>
+                        <button class="btn btn-support"
+                            onclick="window.location = '../contact-us.html'">Support</button>
                     </div>
                 </div>
                 <div class="footer-column footer-brand">
                     <div class="footer-logo">
-                        <span class="logo-text">business list</span>
+                        <span class="logo-text"  onclick="window.location = '/index.html'">business list</span>
                     </div>
                     <p class="footer-description">
-                        BusinessList.pk is Pakistan's online business directory, helping people discover local businesses near you. Join our community to promote your business and effectively reach your target audience.
+                        BusinessList.pk is Pakistan's online business directory, helping people discover local
+                        businesses near you. Join our community to promote your business and effectively reach your
+                        target audience.
                     </p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
@@ -221,7 +232,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-stats">
                 <h4>Pakistan Network Database</h4>
                 <div class="stats-grid">
@@ -243,16 +254,17 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
-                <p>By continuing past this page, you agree to our 
-                    <a href="#">Terms of use</a>, 
-                    <a href="#">Cookies policy</a>, 
-                    <a href="#">Privacy policy</a>, 
+                <p>By continuing past this page, you agree to our
+                    <a href="#">Terms of use</a>,
+                    <a href="#">Cookies policy</a>,
+                    <a href="#">Privacy policy</a>,
                     <a href="#">Terms of service</a>.© 2009 - 2025 BusinessList.pk (PRO2)
                 </p>
             </div>
         </div>
     </footer>
 </body>
+
 </html>
