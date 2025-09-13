@@ -383,10 +383,6 @@ body {
   flex-wrap: wrap;
 }
 
-.paypal-logo {
-  height: 40px;
-  width: auto;
-}
 
 .credit-cards {
   display: flex;
@@ -394,13 +390,15 @@ body {
   flex-wrap: wrap;
 }
 
-.card-logo {
+.card-logo img {
   background: white;
   padding: 10px 20px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   font-size: 12px;
   font-weight: bold;
+  height: 60px;
+  width: auto;
   color: #333;
   min-width: 80px;
   text-align: center;

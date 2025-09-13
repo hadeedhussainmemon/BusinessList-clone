@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="sign-up.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- Updated script reference to use the new signup-specific JavaScript file -->
     <script src="sign-up.js" defer></script>
 </head>
 
@@ -53,8 +54,28 @@
                             of businesses</p>
                     </div>
 
+                    <!-- Enhanced progress indicator -->
+                    <div class="progress-indicator">
+                        <div class="progress-step active" data-step="1">
+                            <div class="step-number">1</div>
+                            <div class="step-label">Account Type</div>
+                        </div>
+                        <div class="progress-step" data-step="2">
+                            <div class="step-number">2</div>
+                            <div class="step-label">Personal Info</div>
+                        </div>
+                        <div class="progress-step" data-step="3">
+                            <div class="step-number">3</div>
+                            <div class="step-label">Security</div>
+                        </div>
+                        <div class="progress-step" data-step="4">
+                            <div class="step-number">4</div>
+                            <div class="step-label">Complete</div>
+                        </div>
+                    </div>
+
                     <!-- Account Type Selection -->
-                    <div class="account-type-selection">
+                    <div class="account-type-selection form-step active" data-step="1">
                         <h3>Choose Account Type</h3>
                         <div class="account-types">
                             <div class="account-type active" data-type="personal">
@@ -64,6 +85,12 @@
                                 <div class="type-info">
                                     <h4>Personal Account</h4>
                                     <p>For individuals looking to discover businesses</p>
+                                    <!-- Added feature list -->
+                                    <ul class="feature-list">
+                                        <li><i class="fas fa-check"></i> Browse businesses</li>
+                                        <li><i class="fas fa-check"></i> Leave reviews</li>
+                                        <li><i class="fas fa-check"></i> Save favorites</li>
+                                    </ul>
                                 </div>
                             </div>
                             <div class="account-type" data-type="business">
@@ -73,26 +100,38 @@
                                 <div class="type-info">
                                     <h4>Business Account</h4>
                                     <p>For business owners wanting to list their company</p>
+                                    <!-- Added feature list -->
+                                    <ul class="feature-list">
+                                        <li><i class="fas fa-check"></i> List your business</li>
+                                        <li><i class="fas fa-check"></i> Manage reviews</li>
+                                        <li><i class="fas fa-check"></i> Analytics dashboard</li>
+                                    </ul>
                                 </div>
                             </div>
+                        </div>
+                        <div class="step-actions">
+                            <button type="button" class="btn btn-primary next-step">Continue</button>
                         </div>
                     </div>
 
                     <!-- Sign Up Form -->
                     <form class="signup-form" id="signupForm">
                         <!-- Personal Information -->
-                        <div class="form-section">
+                        <div class="form-section form-step" data-step="2">
                             <h3 class="section-title">Personal Information</h3>
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="firstName" class="form-label">First Name <span
                                             class="required">*</span></label>
                                     <input type="text" id="firstName" name="firstName" class="form-input" required>
+                                    <!-- Added real-time validation -->
+                                    <div class="validation-message"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="lastName" class="form-label">Last Name <span
                                             class="required">*</span></label>
                                     <input type="text" id="lastName" name="lastName" class="form-input" required>
+                                    <div class="validation-message"></div>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -100,74 +139,86 @@
                                         class="required">*</span></label>
                                 <input type="email" id="email" name="email" class="form-input" required>
                                 <div class="field-hint">We'll send you a verification email</div>
+                                <div class="validation-message"></div>
                             </div>
                             <div class="form-group">
                                 <label for="phone" class="form-label">Phone Number</label>
                                 <input type="tel" id="phone" name="phone" class="form-input"
                                     placeholder="+92 300 1234567">
+                                <div class="validation-message"></div>
                             </div>
-                        </div>
 
-                        <!-- Business Information (shown only for business accounts) -->
-                        <div class="form-section business-only" id="businessSection" style="display: none;">
-                            <h3 class="section-title">Business Information</h3>
-                            <div class="form-group">
-                                <label for="businessName" class="form-label">Business Name <span
-                                        class="required">*</span></label>
-                                <input type="text" id="businessName" name="businessName" class="form-input">
-                            </div>
-                            <div class="form-row">
+                            <!-- Business Information (shown only for business accounts) -->
+                            <div class="business-section business-only" id="businessSection" style="display: none;">
+                                <h4 class="subsection-title">Business Information</h4>
                                 <div class="form-group">
-                                    <label for="businessCategory" class="form-label">Business Category <span
+                                    <label for="businessName" class="form-label">Business Name <span
                                             class="required">*</span></label>
-                                    <select id="businessCategory" name="businessCategory" class="form-select">
-                                        <option value="">Select Category</option>
-                                        <option value="restaurants">Restaurants</option>
-                                        <option value="automotive">Automotive</option>
-                                        <option value="healthcare">Healthcare</option>
-                                        <option value="retail">Retail & Shopping</option>
-                                        <option value="services">Professional Services</option>
-                                        <option value="technology">Technology</option>
-                                        <option value="education">Education</option>
-                                        <option value="real-estate">Real Estate</option>
-                                        <option value="manufacturing">Manufacturing</option>
-                                        <option value="other">Other</option>
-                                    </select>
+                                    <input type="text" id="businessName" name="businessName" class="form-input">
+                                    <div class="validation-message"></div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="businessCategory" class="form-label">Business Category <span
+                                                class="required">*</span></label>
+                                        <select id="businessCategory" name="businessCategory" class="form-select">
+                                            <option value="">Select Category</option>
+                                            <option value="restaurants">Restaurants</option>
+                                            <option value="automotive">Automotive</option>
+                                            <option value="healthcare">Healthcare</option>
+                                            <option value="retail">Retail & Shopping</option>
+                                            <option value="services">Professional Services</option>
+                                            <option value="technology">Technology</option>
+                                            <option value="education">Education</option>
+                                            <option value="real-estate">Real Estate</option>
+                                            <option value="manufacturing">Manufacturing</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <div class="validation-message"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="businessCity" class="form-label">City <span
+                                                class="required">*</span></label>
+                                        <select id="businessCity" name="businessCity" class="form-select">
+                                            <option value="">Select City</option>
+                                            <option value="karachi">Karachi</option>
+                                            <option value="lahore">Lahore</option>
+                                            <option value="islamabad">Islamabad</option>
+                                            <option value="rawalpindi">Rawalpindi</option>
+                                            <option value="faisalabad">Faisalabad</option>
+                                            <option value="multan">Multan</option>
+                                            <option value="peshawar">Peshawar</option>
+                                            <option value="quetta">Quetta</option>
+                                            <option value="sialkot">Sialkot</option>
+                                            <option value="gujranwala">Gujranwala</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <div class="validation-message"></div>
+                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="businessCity" class="form-label">City <span
-                                            class="required">*</span></label>
-                                    <select id="businessCity" name="businessCity" class="form-select">
-                                        <option value="">Select City</option>
-                                        <option value="karachi">Karachi</option>
-                                        <option value="lahore">Lahore</option>
-                                        <option value="islamabad">Islamabad</option>
-                                        <option value="rawalpindi">Rawalpindi</option>
-                                        <option value="faisalabad">Faisalabad</option>
-                                        <option value="multan">Multan</option>
-                                        <option value="peshawar">Peshawar</option>
-                                        <option value="quetta">Quetta</option>
-                                        <option value="sialkot">Sialkot</option>
-                                        <option value="gujranwala">Gujranwala</option>
-                                        <option value="other">Other</option>
-                                    </select>
+                                    <label for="businessWebsite" class="form-label">Business Website</label>
+                                    <input type="url" id="businessWebsite" name="businessWebsite" class="form-input"
+                                        placeholder="https://www.yourbusiness.com">
+                                    <div class="validation-message"></div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="businessWebsite" class="form-label">Business Website</label>
-                                <input type="url" id="businessWebsite" name="businessWebsite" class="form-input"
-                                    placeholder="https://www.yourbusiness.com">
+
+                            <div class="step-actions">
+                                <button type="button" class="btn btn-secondary prev-step">Back</button>
+                                <button type="button" class="btn btn-primary next-step">Continue</button>
                             </div>
                         </div>
 
                         <!-- Account Security -->
-                        <div class="form-section">
+                        <div class="form-section form-step" data-step="3">
                             <h3 class="section-title">Account Security</h3>
                             <div class="form-group">
                                 <label for="username" class="form-label">Username <span
                                         class="required">*</span></label>
                                 <input type="text" id="username" name="username" class="form-input" required>
                                 <div class="field-hint">Choose a unique username (3-20 characters)</div>
+                                <div class="validation-message"></div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group">
@@ -180,69 +231,89 @@
                                             <i class="fas fa-eye"></i>
                                         </button>
                                     </div>
+                                    <!-- Added password strength indicator -->
+                                    <div class="password-strength">
+                                        <div class="strength-bar">
+                                            <div class="strength-fill"></div>
+                                        </div>
+                                        <div class="strength-text">Password strength</div>
+                                    </div>
+                                    <div class="validation-message"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="confirmPassword" class="form-label">Confirm Password <span
                                             class="required">*</span></label>
                                     <input type="password" id="confirmPassword" name="confirmPassword"
                                         class="form-input" required>
+                                    <div class="validation-message"></div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Preferences -->
-                        <div class="form-section">
-                            <h3 class="section-title">Preferences</h3>
-                            <div class="checkbox-group">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="newsletter" value="1" checked>
-                                    <span class="checkmark"></span>
-                                    Subscribe to our newsletter for business updates and opportunities
-                                </label>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="promotions" value="1">
-                                    <span class="checkmark"></span>
-                                    Receive promotional offers and special deals
-                                </label>
-                                <label class="checkbox-label business-only" id="businessUpdates" style="display: none;">
-                                    <input type="checkbox" name="businessUpdates" value="1" checked>
-                                    <span class="checkmark"></span>
-                                    Get notified about new business listing features
-                                </label>
+                            <!-- Preferences -->
+                            <div class="preferences-section">
+                                <h4 class="subsection-title">Preferences</h4>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="newsletter" value="1" checked>
+                                        <span class="checkmark"></span>
+                                        Subscribe to our newsletter for business updates and opportunities
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="promotions" value="1">
+                                        <span class="checkmark"></span>
+                                        Receive promotional offers and special deals
+                                    </label>
+                                    <label class="checkbox-label business-only" id="businessUpdates" style="display: none;">
+                                        <input type="checkbox" name="businessUpdates" value="1" checked>
+                                        <span class="checkmark"></span>
+                                        Get notified about new business listing features
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="step-actions">
+                                <button type="button" class="btn btn-secondary prev-step">Back</button>
+                                <button type="button" class="btn btn-primary next-step">Continue</button>
                             </div>
                         </div>
 
-                        <!-- Human Verification -->
-                        <div class="form-section">
-                            <h3 class="section-title">Verification</h3>
-                            <div class="recaptcha-container">
-                                <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+                        <!-- Final Step -->
+                        <div class="form-section form-step" data-step="4">
+                            <h3 class="section-title">Complete Registration</h3>
+                            
+                            <!-- Human Verification -->
+                            <div class="verification-section">
+                                <h4 class="subsection-title">Verification</h4>
+                                <div class="recaptcha-container">
+                                    <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- Terms Agreement -->
-                        <div class="form-section">
-                            <div class="terms-agreement">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
-                                    <span class="checkmark"></span>
-                                    I agree to the <a href="#" class="terms-link">Terms of Service</a> and <a href="#"
-                                        class="terms-link">Privacy Policy</a>
-                                </label>
+                            <!-- Terms Agreement -->
+                            <div class="terms-section">
+                                <div class="terms-agreement">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                                        <span class="checkmark"></span>
+                                        I agree to the <a href="#" class="terms-link">Terms of Service</a> and <a href="#"
+                                            class="terms-link">Privacy Policy</a>
+                                    </label>
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- Form Actions -->
-                        <div class="form-actions">
-                            <button type="submit" class="btn btn-primary" id="createAccountBtn">
-                                <i class="fas fa-user-plus"></i>
-                                CREATE ACCOUNT
-                            </button>
-                        </div>
+                            <!-- Form Actions -->
+                            <div class="step-actions">
+                                <button type="button" class="btn btn-secondary prev-step">Back</button>
+                                <button type="submit" class="btn btn-primary" id="createAccountBtn">
+                                    <i class="fas fa-user-plus"></i>
+                                    CREATE ACCOUNT
+                                </button>
+                            </div>
 
-                        <!-- Sign In Link -->
-                        <div class="signin-link">
-                            <p>Already have an account? <a href="sign-in.html" class="link">Sign In</a></p>
+                            <!-- Sign In Link -->
+                            <div class="signin-link">
+                                <p>Already have an account? <a href="sign-in.html" class="link">Sign In</a></p>
+                            </div>
                         </div>
                     </form>
                 </div>
