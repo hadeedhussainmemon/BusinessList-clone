@@ -5,9 +5,9 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
+  font-family: 'Product Sans', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #202124;
+  color: #e8eaed;
   line-height: 1.6;
   min-height: 100vh;
   display: flex;
@@ -22,12 +22,13 @@ body {
 
 /* Header */
 .header {
-  background: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: #1a1a1a;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   padding: 20px 0;
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid #3c4043;
 }
 
 .logo {
@@ -35,10 +36,12 @@ body {
 }
 
 .logo-text {
-  background: #e74c3c;
-  color: white;
+  background: linear-gradient(90deg, #4285F4 0%, #EA4335 25%, #FBBC04 50%, #34A853 75%, #4285F4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
   padding: 8px 16px;
-  border-radius: 4px;
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
@@ -52,9 +55,9 @@ body {
 }
 
 .logo a:hover .logo-text {
-  background: #c0392b;
   transform: translateY(-1px);
   transition: all 0.3s ease;
+  opacity: 0.9;
 }
 
 /* Main Content */
@@ -74,17 +77,18 @@ body {
 }
 
 .signin-form-wrapper {
-  background: white;
+  background: #292a2d;
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   text-align: center;
+  border: 1px solid #3c4043;
 }
 
 .signin-title {
   font-size: 28px;
   font-weight: 600;
-  color: #2c3e50;
+  color: #e8eaed;
   margin-bottom: 40px;
   text-align: center;
 }
@@ -107,28 +111,29 @@ body {
 .input-wrapper input {
   width: 100%;
   padding: 15px 15px 15px 50px;
-  border: 2px solid #e1e8ed;
+  border: 2px solid #3c4043;
   border-radius: 8px;
   font-size: 16px;
-  background: #f8f9fa;
+  background: #202124;
+  color: #e8eaed;
   transition: all 0.3s ease;
   outline: none;
 }
 
 .input-wrapper input:focus {
-  border-color: #27ae60;
-  background: white;
-  box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+  border-color: #4285F4;
+  background: #292a2d;
+  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.2);
 }
 
 .input-wrapper input.error {
-  border-color: #e74c3c;
-  background: #fdf2f2;
+  border-color: #EA4335;
+  background: rgba(234, 67, 53, 0.1);
 }
 
 .input-wrapper input.success {
-  border-color: #27ae60;
-  background: #f8fff8;
+  border-color: #34A853;
+  background: rgba(52, 168, 83, 0.1);
 }
 
 /* Input Icons */
@@ -141,13 +146,13 @@ body {
 }
 
 .user-icon {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2327ae60' viewBox='0 0 24 24'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E")
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234285F4' viewBox='0 0 24 24'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E")
     no-repeat center;
   background-size: contain;
 }
 
 .lock-icon {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2327ae60' viewBox='0 0 24 24'%3E%3Cpath d='M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z'/%3E%3C/svg%3E")
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234285F4' viewBox='0 0 24 24'%3E%3Cpath d='M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z'/%3E%3C/svg%3E")
     no-repeat center;
   background-size: contain;
 }
@@ -166,7 +171,7 @@ body {
 .eye-icon {
   width: 20px;
   height: 20px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23666' viewBox='0 0 24 24'%3E%3Cpath d='M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z'/%3E%3C/svg%3E")
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%239aa0a6' viewBox='0 0 24 24'%3E%3Cpath d='M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z'/%3E%3C/svg%3E")
     no-repeat center;
   background-size: contain;
   display: block;
@@ -175,7 +180,7 @@ body {
 /* Sign In Button */
 .signin-btn {
   width: 100%;
-  background: #27ae60;
+  background: #34A853;
   color: white;
   border: none;
   padding: 15px 30px;
@@ -188,12 +193,13 @@ body {
   overflow: hidden;
   text-transform: uppercase;
   letter-spacing: 1px;
+  box-shadow: 0 1px 3px rgba(52, 168, 83, 0.3);
 }
 
 .signin-btn:hover {
-  background: #219a52;
+  background: #2d9249;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+  box-shadow: 0 5px 15px rgba(52, 168, 83, 0.4);
 }
 
 .signin-btn:active {
@@ -201,10 +207,11 @@ body {
 }
 
 .signin-btn:disabled {
-  background: #bdc3c7;
+  background: #5f6368;
   cursor: not-allowed;
   transform: none;
   box-shadow: none;
+  opacity: 0.6;
 }
 
 .btn-loader {
@@ -245,32 +252,32 @@ body {
 }
 
 .forgot-link {
-  color: #3498db;
+  color: #4285F4;
   text-decoration: none;
   font-size: 14px;
   transition: color 0.3s ease;
 }
 
 .forgot-link:hover {
-  color: #2980b9;
+  color: #5a95f5;
   text-decoration: underline;
 }
 
 /* Sign Up Prompt */
 .signup-prompt {
-  color: #666;
+  color: #9aa0a6;
   font-size: 14px;
 }
 
 .signup-link {
-  color: #3498db;
+  color: #4285F4;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .signup-link:hover {
-  color: #2980b9;
+  color: #5a95f5;
   text-decoration: underline;
 }
 
@@ -288,25 +295,26 @@ body {
 }
 
 .message.success {
-  background: #d4edda;
-  color: #155724;
-  border: 1px solid #c3e6cb;
+  background: rgba(52, 168, 83, 0.2);
+  color: #34A853;
+  border: 1px solid #34A853;
   display: block;
 }
 
 .message.error {
-  background: #f8d7da;
-  color: #721c24;
-  border: 1px solid #f5c6cb;
+  background: rgba(234, 67, 53, 0.2);
+  color: #EA4335;
+  border: 1px solid #EA4335;
   display: block;
 }
 
 /* Footer */
 .footer {
-  background: #2c3e50;
-  color: white;
+  background: #171717;
+  color: #e8eaed;
   padding: 20px 0;
   margin-top: auto;
+  border-top: 1px solid #3c4043;
 }
 
 .footer-links {
@@ -317,14 +325,14 @@ body {
 }
 
 .footer-links a {
-  color: #bdc3c7;
+  color: #9aa0a6;
   text-decoration: none;
   font-size: 14px;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: white;
+  color: #4285F4;
 }
 
 /* Responsive Design */

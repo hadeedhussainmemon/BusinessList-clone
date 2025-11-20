@@ -5,9 +5,9 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
+  font-family: 'Product Sans', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #202124;
+  color: #e8eaed;
   line-height: 1.6;
   min-height: 100vh;
 }
@@ -20,7 +20,8 @@ body {
 
 /* Header */
 .header {
-  background: white;
+  background: #1a1a1a;
+  border-bottom: 1px solid #3c4043;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 20px 0;
   position: sticky;
@@ -35,8 +36,11 @@ body {
 }
 
 .logo-text {
-  background: #e74c3c;
-  color: white;
+  background: linear-gradient(90deg, #4285F4 0%, #EA4335 25%, #FBBC04 50%, #34A853 75%, #4285F4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
   padding: 8px 16px;
   border-radius: 4px;
   font-size: 16px;
@@ -48,8 +52,8 @@ body {
 }
 
 .logo-text:hover {
-  background: #c0392b;
   transform: translateY(-1px);
+  opacity: 0.9;
 }
 
 .nav-menu {
@@ -59,18 +63,18 @@ body {
 }
 
 .nav-link {
-  color: #333;
+  color: #e8eaed;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #e74c3c;
+  color: #4285F4;
 }
 
 .get-listed-btn {
-  background: #27ae60;
+  background: #34A853;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -81,7 +85,7 @@ body {
 }
 
 .get-listed-btn:hover {
-  background: #219a52;
+  background: #2d9248;
   transform: translateY(-1px);
 }
 
@@ -98,7 +102,7 @@ body {
 
 .search-icon-btn:hover,
 .menu-toggle:hover {
-  background: #f8f9fa;
+  background: #292a2d;
 }
 
 .menu-toggle {
@@ -226,7 +230,7 @@ body {
 /* Pricing Section */
 .network-pricing-section {
   padding: 80px 0;
-  background: white;
+  background: #202124;
 }
 
 .pricing-grid {
@@ -238,27 +242,27 @@ body {
 }
 
 .pricing-card {
-  background: white;
+  background: #292a2d;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   padding: 40px 30px;
   text-align: center;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 2px solid transparent;
+  border: 2px solid #3c4043;
 }
 
 .pricing-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  border-color: #27ae60;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border-color: #34A853;
 }
 
 .discount-badge {
   position: absolute;
   top: -10px;
   right: 20px;
-  background: #e74c3c;
+  background: #EA4335;
   color: white;
   padding: 5px 15px;
   border-radius: 15px;
@@ -269,7 +273,7 @@ body {
 .pricing-title {
   font-size: 24px;
   font-weight: 600;
-  color: #2c3e50;
+  color: #e8eaed;
   margin-bottom: 20px;
 }
 
@@ -280,18 +284,18 @@ body {
 .price-number {
   font-size: 48px;
   font-weight: bold;
-  color: #27ae60;
+  color: #34A853;
 }
 
 .price-currency {
   font-size: 18px;
-  color: #666;
+  color: #9aa0a6;
   margin-left: 5px;
 }
 
 .price-original {
   font-size: 16px;
-  color: #999;
+  color: #5f6368;
   text-decoration: line-through;
   margin-left: 10px;
 }
@@ -322,7 +326,7 @@ body {
 
 .pricing-note {
   font-size: 12px;
-  color: #666;
+  color: #9aa0a6;
 }
 
 .pricing-features {
@@ -339,12 +343,12 @@ body {
 }
 
 .feature i {
-  color: #27ae60;
+  color: #34A853;
   font-size: 12px;
 }
 
 .btn-pricing {
-  background: #27ae60;
+  background: #34A853;
   color: white;
   border: none;
   padding: 12px 30px;
@@ -356,14 +360,14 @@ body {
 }
 
 .btn-pricing:hover {
-  background: #219a52;
+  background: #2d9248;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+  box-shadow: 0 5px 15px rgba(52, 168, 83, 0.3);
 }
 
 /* Payment Section */
 .payment-section {
-  background: #f8f9fa;
+  background: #171717;
   padding: 60px 0;
   text-align: center;
 }
@@ -371,7 +375,7 @@ body {
 .payment-title {
   font-size: 28px;
   font-weight: 600;
-  color: #2c3e50;
+  color: #e8eaed;
   margin-bottom: 40px;
 }
 
@@ -391,15 +395,15 @@ body {
 }
 
 .card-logo img {
-  background: white;
+  background: #292a2d;
   padding: 10px 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   font-size: 12px;
   font-weight: bold;
   height: 60px;
   width: auto;
-  color: #333;
+  color: #e8eaed;
   min-width: 80px;
   text-align: center;
 }
@@ -407,13 +411,13 @@ body {
 /* Why Choose Section */
 .why-choose-section {
   padding: 80px 0;
-  background: white;
+  background: #202124;
 }
 
 .section-title {
   font-size: 36px;
   font-weight: 600;
-  color: #2c3e50;
+  color: #e8eaed;
   text-align: center;
   margin-bottom: 60px;
 }
@@ -427,7 +431,7 @@ body {
 }
 
 .benefit-card {
-  background: #f8f9fa;
+  background: #292a2d;
   padding: 40px 30px;
   border-radius: 12px;
   text-align: center;
@@ -436,11 +440,11 @@ body {
 
 .benefit-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .benefit-icon-wrapper {
-  background: #3498db;
+  background: #4285F4;
   color: white;
   width: 80px;
   height: 80px;
@@ -455,18 +459,18 @@ body {
 .benefit-title {
   font-size: 24px;
   font-weight: 600;
-  color: #2c3e50;
+  color: #e8eaed;
   margin-bottom: 15px;
 }
 
 .benefit-description {
-  color: #666;
+  color: #9aa0a6;
   line-height: 1.6;
 }
 
 /* FAQ Section */
 .faq-section {
-  background: #f8f9fa;
+  background: #171717;
   padding: 80px 0;
 }
 
@@ -476,10 +480,10 @@ body {
 }
 
 .faq-item {
-  background: white;
+  background: #292a2d;
   border-radius: 8px;
   margin-bottom: 15px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   overflow: hidden;
 }
 
@@ -493,12 +497,12 @@ body {
 }
 
 .faq-question:hover {
-  background: #f8f9fa;
+  background: #202124;
 }
 
 .faq-question h3 {
   font-size: 18px;
-  color: #2c3e50;
+  color: #e8eaed;
   margin: 0;
 }
 
@@ -506,7 +510,7 @@ body {
   background: none;
   border: none;
   font-size: 16px;
-  color: #666;
+  color: #9aa0a6;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -528,13 +532,13 @@ body {
 }
 
 .faq-answer p {
-  color: #666;
+  color: #9aa0a6;
   line-height: 1.6;
   margin: 0;
 }
 
 .text-link {
-  color: #3498db;
+  color: #4285F4;
   text-decoration: none;
 }
 
@@ -544,7 +548,8 @@ body {
 
 /* Footer */
 .footer {
-  background: #2c3e50;
+  background: #171717;
+  border-top: 1px solid #3c4043;
   color: white;
   padding: 40px 0 20px;
 }
@@ -570,30 +575,30 @@ body {
 }
 
 .footer-column ul li a {
-  color: #bdc3c7;
+  color: #9aa0a6;
   text-decoration: none;
   font-size: 14px;
   transition: color 0.3s ease;
 }
 
 .footer-column ul li a:hover {
-  color: white;
+  color: #4285F4;
 }
 
 .support-section {
   margin-top: 30px;
   padding-top: 20px;
-  border-top: 1px solid #34495e;
+  border-top: 1px solid #3c4043;
 }
 
 .support-section p {
   font-size: 14px;
   margin-bottom: 15px;
-  color: #bdc3c7;
+  color: #9aa0a6;
 }
 
 .btn-support {
-  background: #3498db;
+  background: #4285F4;
   color: white;
   padding: 8px 16px;
   border-radius: 15px;
@@ -604,7 +609,7 @@ body {
 }
 
 .btn-support:hover {
-  background: #2980b9;
+  background: #3367d6;
 }
 
 .footer-brand .footer-logo {
@@ -613,7 +618,7 @@ body {
 
 .footer-description {
   font-size: 14px;
-  color: #bdc3c7;
+  color: #9aa0a6;
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -624,7 +629,7 @@ body {
 }
 
 .social-link {
-  background: #34495e;
+  background: #292a2d;
   color: white;
   padding: 10px;
   border-radius: 50%;
@@ -633,11 +638,11 @@ body {
 }
 
 .social-link:hover {
-  background: #3498db;
+  background: #4285F4;
 }
 
 .footer-stats {
-  border-top: 1px solid #34495e;
+  border-top: 1px solid #3c4043;
   padding-top: 30px;
   margin-bottom: 30px;
 }
@@ -664,29 +669,29 @@ body {
 .stat-number {
   font-size: 24px;
   font-weight: bold;
-  color: #3498db;
+  color: #4285F4;
   margin-bottom: 5px;
 }
 
 .stat-label {
   font-size: 12px;
-  color: #bdc3c7;
+  color: #9aa0a6;
 }
 
 .footer-bottom {
-  border-top: 1px solid #34495e;
+  border-top: 1px solid #3c4043;
   padding-top: 20px;
   text-align: center;
 }
 
 .footer-bottom p {
   font-size: 12px;
-  color: #bdc3c7;
+  color: #9aa0a6;
   line-height: 1.5;
 }
 
 .footer-bottom a {
-  color: #3498db;
+  color: #4285F4;
   text-decoration: none;
 }
 

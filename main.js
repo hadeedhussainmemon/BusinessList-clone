@@ -207,17 +207,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateScrollBehavior() {
       const scrolled = window.scrollY;
       const header = document.querySelector(".header");
-
-      if (header) {
-        if (scrolled > 100) {
-          header.style.background = "rgba(255, 255, 255, 0.95)";
-          header.style.backdropFilter = "blur(10px)";
-        } else {
-          header.style.background = "white";
-          header.style.backdropFilter = "none";
-        }
-      }
-
       ticking = false;
     }
 
@@ -313,6 +302,70 @@ document.addEventListener("DOMContentLoaded", () => {
   handleMobileScroll();
   enhanceTouchInteractions();
   handleViewportChanges();
+
+  // Infinite horizontal category scroller
+  function initCategoryScroller() {
+    const row = document.querySelector('.categories-row');
+    if (!row) return;
+    // If already initialized (duplicated) skip
+    if (row.dataset.scrollerInit === 'true') return;
+    const items = Array.from(row.children);
+    if (items.length === 0) return;
+    // Duplicate items once for seamless loop
+    items.forEach(item => {
+      const clone = item.cloneNode(true);
+      clone.setAttribute('aria-hidden','true');
+      row.appendChild(clone);
+    });
+    // Compute total width of original set for duration calc
+    const totalWidth = items.reduce((acc, el) => acc + el.getBoundingClientRect().width, 0);
+    // Base speed ~100px/sec, derive duration to scroll full set (50% translate)
+    const speed = 100; // px per second
+    const duration = totalWidth / speed; // seconds
+    row.style.setProperty('--scroll-duration', duration + 's');
+    row.dataset.scrollerInit = 'true';
+  }
+
+  initCategoryScroller();
+  // Auto horizontal scroll while allowing user interaction
+  function autoScrollCategories() {
+    const scroller = document.querySelector('.categories-scroller');
+    const row = document.querySelector('.categories-row');
+    if (!scroller || !row) return;
+    let auto = true;
+    let lastInteraction = Date.now();
+    const idleResumeMs = 4000;
+    // Adjust speed relative to total width (larger sets scroll faster slightly)
+    const baseSpeed = 0.4; // px per frame baseline
+    const originalWidth = row.scrollWidth / 2; // due to duplication in initCategoryScroller
+
+    function tick() {
+      // Resume auto if idle long enough
+      if (!auto && Date.now() - lastInteraction > idleResumeMs) {
+        auto = true;
+      }
+      if (auto) {
+        scroller.scrollLeft += baseSpeed;
+        // Loop seamlessly
+        if (scroller.scrollLeft >= originalWidth) {
+          scroller.scrollLeft -= originalWidth;
+        }
+      }
+      requestAnimationFrame(tick);
+    }
+    // Interaction handlers to pause auto scroll
+    function userInteracted() {
+      auto = false;
+      lastInteraction = Date.now();
+    }
+    ['pointerdown','wheel','touchstart','keydown','mouseenter'].forEach(evt => {
+      scroller.addEventListener(evt, userInteracted, { passive: true });
+    });
+    // If user is actively dragging (touchmove) keep paused
+    scroller.addEventListener('touchmove', userInteracted, { passive: true });
+    tick();
+  }
+  autoScrollCategories();
 
   function initImageProtection() {
     // Prevent dragging of all images, icons, and SVGs

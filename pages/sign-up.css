@@ -5,9 +5,9 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
+  font-family: 'Product Sans', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #202124;
+  color: #e8eaed;
   line-height: 1.6;
   min-height: 100vh;
 }
@@ -20,7 +20,8 @@ body {
 
 /* Header */
 .header {
-  background: white;
+  background: #1a1a1a;
+  border-bottom: 1px solid #3c4043;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 20px 0;
   position: sticky;
@@ -35,8 +36,11 @@ body {
 }
 
 .logo-text {
-  background: #e74c3c;
-  color: white;
+  background: linear-gradient(90deg, #4285F4 0%, #EA4335 25%, #FBBC04 50%, #34A853 75%, #4285F4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
   padding: 8px 16px;
   border-radius: 4px;
   font-size: 16px;
@@ -49,8 +53,8 @@ body {
 }
 
 .logo-text:hover {
-  background: #c0392b;
   transform: translateY(-1px);
+  opacity: 0.9;
 }
 
 .nav-menu {
@@ -60,18 +64,18 @@ body {
 }
 
 .nav-link {
-  color: #333;
+  color: #e8eaed;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #e74c3c;
+  color: #4285F4;
 }
 
 .get-listed-btn {
-  background: #27ae60;
+  background: #34A853;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -82,7 +86,7 @@ body {
 }
 
 .get-listed-btn:hover {
-  background: #219a52;
+  background: #2d9248;
   transform: translateY(-1px);
 }
 
@@ -99,7 +103,7 @@ body {
 
 .search-icon-btn:hover,
 .menu-toggle:hover {
-  background: #f8f9fa;
+  background: #292a2d;
 }
 
 .menu-toggle {
@@ -117,17 +121,17 @@ body {
 }
 
 .breadcrumb-link {
-  color: #3498db;
+  color: #4285F4;
   text-decoration: none;
 }
 
 .breadcrumb-separator {
   margin: 0 10px;
-  color: #666;
+  color: #9aa0a6;
 }
 
 .breadcrumb-current {
-  color: #666;
+  color: #9aa0a6;
 }
 
 .signup-container {
@@ -161,20 +165,20 @@ body {
   left: 60%;
   right: -40%;
   height: 2px;
-  background: #e1e8ed;
+  background: #3c4043;
   z-index: 1;
 }
 
 .progress-step.active:not(:last-child)::after {
-  background: #27ae60;
+  background: #34A853;
 }
 
 .step-number {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: #e1e8ed;
-  color: #666;
+  background: #3c4043;
+  color: #9aa0a6;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -187,12 +191,12 @@ body {
 }
 
 .progress-step.active .step-number {
-  background: #27ae60;
+  background: #34A853;
   color: white;
 }
 
 .progress-step.completed .step-number {
-  background: #27ae60;
+  background: #34A853;
   color: white;
 }
 
@@ -203,22 +207,22 @@ body {
 
 .step-label {
   font-size: 12px;
-  color: #666;
+  color: #9aa0a6;
   text-align: center;
   font-weight: 500;
 }
 
 .progress-step.active .step-label {
-  color: #27ae60;
+  color: #34A853;
   font-weight: 600;
 }
 
 /* Form Section */
 .signup-form-section {
-  background: white;
+  background: #292a2d;
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .form-header {
@@ -229,12 +233,12 @@ body {
 .form-title {
   font-size: 32px;
   font-weight: 600;
-  color: #2c3e50;
+  color: #e8eaed;
   margin-bottom: 10px;
 }
 
 .form-subtitle {
-  color: #666;
+  color: #9aa0a6;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -247,7 +251,7 @@ body {
 .account-type-selection h3 {
   font-size: 18px;
   margin-bottom: 20px;
-  color: #2c3e50;
+  color: #e8eaed;
 }
 
 .account-types {
@@ -257,7 +261,7 @@ body {
 }
 
 .account-type {
-  border: 2px solid #e1e8ed;
+  border: 2px solid #3c4043;
   border-radius: 12px;
   padding: 25px;
   cursor: pointer;
@@ -268,6 +272,7 @@ body {
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: #202124;
 }
 
 .account-type::before {
@@ -282,45 +287,45 @@ body {
 }
 
 .account-type:hover {
-  border-color: #3498db;
-  background: #f8fbff;
+  border-color: #4285F4;
+  background: rgba(66, 133, 244, 0.1);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.15);
+  box-shadow: 0 8px 25px rgba(66, 133, 244, 0.2);
 }
 
 .account-type.active {
-  border-color: #27ae60;
-  background: #f8fff8;
+  border-color: #34A853;
+  background: rgba(52, 168, 83, 0.1);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(39, 174, 96, 0.15);
+  box-shadow: 0 8px 25px rgba(52, 168, 83, 0.2);
 }
 
 .account-type.active::before {
-  background: #27ae60;
+  background: #34A853;
 }
 
 .type-icon {
   font-size: 32px;
-  color: #3498db;
+  color: #4285F4;
   margin-bottom: 15px;
   transition: all 0.3s ease;
 }
 
 .account-type.active .type-icon {
-  color: #27ae60;
+  color: #34A853;
   transform: scale(1.1);
 }
 
 .type-info h4 {
   font-size: 18px;
   margin-bottom: 8px;
-  color: #2c3e50;
+  color: #e8eaed;
   font-weight: 600;
 }
 
 .type-info p {
   font-size: 14px;
-  color: #666;
+  color: #9aa0a6;
   line-height: 1.5;
   margin-bottom: 15px;
 }
@@ -332,10 +337,10 @@ body {
 
 .section-title {
   font-size: 18px;
-  color: #2c3e50;
+  color: #e8eaed;
   margin-bottom: 20px;
   padding-bottom: 8px;
-  border-bottom: 2px solid #e1e8ed;
+  border-bottom: 2px solid #3c4043;
 }
 
 .form-row {
@@ -352,35 +357,36 @@ body {
   display: block;
   margin-bottom: 8px;
   font-weight: 500;
-  color: #2c3e50;
+  color: #e8eaed;
 }
 
 .required {
-  color: #e74c3c;
+  color: #EA4335;
 }
 
 .form-input,
 .form-select {
   width: 100%;
   padding: 12px 15px;
-  border: 2px solid #e1e8ed;
+  border: 2px solid #3c4043;
   border-radius: 6px;
   font-size: 15px;
-  background: #f8f9fa;
+  background: #202124;
+  color: #e8eaed;
   transition: all 0.3s ease;
   outline: none;
 }
 
 .form-input:focus,
 .form-select:focus {
-  border-color: #27ae60;
-  background: white;
-  box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+  border-color: #4285F4;
+  background: #292a2d;
+  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.2);
 }
 
 .field-hint {
   font-size: 12px;
-  color: #666;
+  color: #9aa0a6;
   margin-top: 5px;
 }
 
@@ -398,7 +404,7 @@ body {
   border: none;
   cursor: pointer;
   padding: 5px;
-  color: #666;
+  color: #9aa0a6;
 }
 
 /* Feature Lists */
@@ -413,12 +419,12 @@ body {
   align-items: center;
   gap: 8px;
   font-size: 13px;
-  color: #666;
+  color: #9aa0a6;
   margin-bottom: 5px;
 }
 
 .feature-list i {
-  color: #27ae60;
+  color: #34A853;
   font-size: 10px;
 }
 
@@ -431,23 +437,23 @@ body {
 }
 
 .validation-message.error {
-  color: #e74c3c;
+  color: #EA4335;
 }
 
 .validation-message.success {
-  color: #27ae60;
+  color: #34A853;
 }
 
 .form-input.error,
 .form-select.error {
-  border-color: #e74c3c;
-  background: #fdf2f2;
+  border-color: #EA4335;
+  background: rgba(234, 67, 53, 0.1);
 }
 
 .form-input.success,
 .form-select.success {
-  border-color: #27ae60;
-  background: #f8fff8;
+  border-color: #34A853;
+  background: rgba(52, 168, 83, 0.1);
 }
 
 /* Password Strength Indicator */
@@ -458,7 +464,7 @@ body {
 .strength-bar {
   width: 100%;
   height: 4px;
-  background: #e1e8ed;
+  background: #3c4043;
   border-radius: 2px;
   overflow: hidden;
   margin-bottom: 5px;
@@ -473,27 +479,27 @@ body {
 
 .strength-fill.weak {
   width: 25%;
-  background: #e74c3c;
+  background: #EA4335;
 }
 
 .strength-fill.fair {
   width: 50%;
-  background: #f39c12;
+  background: #FBBC04;
 }
 
 .strength-fill.good {
   width: 75%;
-  background: #3498db;
+  background: #4285F4;
 }
 
 .strength-fill.strong {
   width: 100%;
-  background: #27ae60;
+  background: #34A853;
 }
 
 .strength-text {
   font-size: 11px;
-  color: #666;
+  color: #9aa0a6;
 }
 
 /* Step Actions */
@@ -502,17 +508,17 @@ body {
   gap: 15px;
   margin-top: 30px;
   padding-top: 20px;
-  border-top: 1px solid #e1e8ed;
+  border-top: 1px solid #3c4043;
 }
 
 .btn-secondary {
-  background: #95a5a6;
+  background: #5f6368;
   color: white;
   flex: 1;
 }
 
 .btn-secondary:hover {
-  background: #7f8c8d;
+  background: #4a4d51;
 }
 
 .btn-primary {
@@ -522,10 +528,10 @@ body {
 /* Subsection Styling */
 .subsection-title {
   font-size: 16px;
-  color: #2c3e50;
+  color: #e8eaed;
   margin: 25px 0 15px 0;
   padding-bottom: 5px;
-  border-bottom: 1px solid #e1e8ed;
+  border-bottom: 1px solid #3c4043;
 }
 
 .business-section,
@@ -534,7 +540,7 @@ body {
 .terms-section {
   margin-top: 25px;
   padding-top: 20px;
-  border-top: 1px solid #f1f2f6;
+  border-top: 1px solid #3c4043;
 }
 
 /* Enhanced Form Step Management */
@@ -640,7 +646,8 @@ body {
 
 /* Footer */
 .footer {
-  background: #2c3e50;
+  background: #171717;
+  border-top: 1px solid #3c4043;
   color: white;
   padding: 40px 0 20px;
   margin-top: 60px;
@@ -667,30 +674,30 @@ body {
 }
 
 .footer-column ul li a {
-  color: #bdc3c7;
+  color: #9aa0a6;
   text-decoration: none;
   font-size: 14px;
   transition: color 0.3s ease;
 }
 
 .footer-column ul li a:hover {
-  color: white;
+  color: #4285F4;
 }
 
 .support-section {
   margin-top: 30px;
   padding-top: 20px;
-  border-top: 1px solid #34495e;
+  border-top: 1px solid #3c4043;
 }
 
 .support-section p {
   font-size: 14px;
   margin-bottom: 15px;
-  color: #bdc3c7;
+  color: #9aa0a6;
 }
 
 .btn-support {
-  background: #3498db;
+  background: #4285F4;
   color: white;
   padding: 8px 16px;
   border-radius: 15px;
@@ -698,7 +705,7 @@ body {
 }
 
 .btn-support:hover {
-  background: #2980b9;
+  background: #3367d6;
 }
 
 .footer-brand .footer-logo {
@@ -707,7 +714,7 @@ body {
 
 .footer-description {
   font-size: 14px;
-  color: #bdc3c7;
+  color: #9aa0a6;
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -718,7 +725,7 @@ body {
 }
 
 .social-link {
-  background: #34495e;
+  background: #292a2d;
   color: white;
   padding: 10px;
   border-radius: 50%;
@@ -727,11 +734,11 @@ body {
 }
 
 .social-link:hover {
-  background: #3498db;
+  background: #4285F4;
 }
 
 .footer-stats {
-  border-top: 1px solid #34495e;
+  border-top: 1px solid #3c4043;
   padding-top: 30px;
   margin-bottom: 30px;
 }
@@ -758,29 +765,29 @@ body {
 .stat-number {
   font-size: 24px;
   font-weight: bold;
-  color: #3498db;
+  color: #4285F4;
   margin-bottom: 5px;
 }
 
 .stat-label {
   font-size: 12px;
-  color: #bdc3c7;
+  color: #9aa0a6;
 }
 
 .footer-bottom {
-  border-top: 1px solid #34495e;
+  border-top: 1px solid #3c4043;
   padding-top: 20px;
   text-align: center;
 }
 
 .footer-bottom p {
   font-size: 12px;
-  color: #bdc3c7;
+  color: #9aa0a6;
   line-height: 1.5;
 }
 
 .footer-bottom a {
-  color: #3498db;
+  color: #4285F4;
   text-decoration: none;
 }
 
