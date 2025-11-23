@@ -94,8 +94,39 @@ a[aria-disabled="true"], .disabled-link {
   display: flex;
   align-items: center;
   gap: 20px;
+  height: 50px;
 }
 
+.nav-link, .get-listed-btn, .search-icon-btn {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.get-listed-btn {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.search-icon-btn img.search-icon {
+  vertical-align: middle;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 45px;
+  height: 45px;
+  background: rgba(66,133,244,0.08);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(66,133,244,0.10);
+  padding: 0;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+
+.search-icon-btn:hover img.search-icon {
+  background: rgba(66,133,244,0.18);
+  box-shadow: 0 4px 12px rgba(66,133,244,0.18);
+}
 .nav-link {
   text-decoration: none;
   color: #e8eaed;

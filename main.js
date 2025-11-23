@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Navbar search icon click handler
+    document.querySelectorAll('.search-icon-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        window.location.href = 'pages/category/browse-categories.html';
+      });
+    });
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
