@@ -982,13 +982,6 @@ body {
   font-size:1.1rem; 
 }
 
-.footer-logo .logo-img {
-  height: 40px;
-  width: auto;
-  cursor: pointer;
-  padding: 10px 16px;
-}
-
 .footer-description { 
   margin:25px 0; 
   color:#9aa0a6; 
@@ -1113,10 +1106,6 @@ body {
     font-size:1rem; 
     padding:8px 12px;
   } 
-  .footer-logo .logo-img{
-    height: 30px;
-    padding: 8px 12px;
-  }
   .btn-support{ 
     padding:10px 20px; 
     font-size:.9rem;
