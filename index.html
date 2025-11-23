@@ -2,12 +2,43 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BusinessList.pk - Pakistan's Verified Online Business Directory</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <script src="main.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BusinessList.pk - Pakistan's Verified Online Business Directory</title>
+        <meta name="description" content="Find verified businesses, reviews, and top categories in Pakistan. BusinessList.pk is your trusted online business directory and search portal.">
+        <meta name="keywords" content="Pakistan business directory, verified businesses, business reviews, local companies, search portal, categories, BusinessList.pk">
+        <link rel="canonical" href="https://businesslist.pk/">
+        <meta name="robots" content="index, follow">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://businesslist.pk/">
+        <meta property="og:title" content="BusinessList.pk - Pakistan's Verified Online Business Directory">
+        <meta property="og:description" content="Find verified businesses, reviews, and top categories in Pakistan. BusinessList.pk is your trusted online business directory and search portal.">
+        <meta property="og:image" content="https://businesslist.pk/img/logo.png">
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:url" content="https://businesslist.pk/">
+        <meta name="twitter:title" content="BusinessList.pk - Pakistan's Verified Online Business Directory">
+        <meta name="twitter:description" content="Find verified businesses, reviews, and top categories in Pakistan. BusinessList.pk is your trusted online business directory and search portal.">
+        <meta name="twitter:image" content="https://businesslist.pk/img/logo.png">
+        <!-- Structured Data: Organization -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "BusinessList.pk",
+            "url": "https://businesslist.pk/",
+            "logo": "https://businesslist.pk/img/logo.png",
+            "sameAs": [
+                "https://facebook.com/businesslistpk",
+                "https://linkedin.com/company/businesslistpk"
+            ],
+            "description": "Find verified businesses, reviews, and top categories in Pakistan. BusinessList.pk is your trusted online business directory and search portal."
+        }
+        </script>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <script src="main.js"></script>
 </head>
 
 <body>
@@ -24,8 +55,8 @@
                     <a href="pages/sign-in.html" class="nav-link">Sign in</a>
                     <button class="get-listed-btn" onclick="window.location = '/pages/create-business-listing.html'">Get
                         Listed</button>
-                    <button class="search-icon-btn">
-                        <img src="img/search-icon.png" alt="Search" class="input-icon search-icon" style="width:24px;height:24px;vertical-align:middle;margin-right:8px;">
+                    <button class="search-icon-btn" type="button" aria-label="Search" role="button">
+                        <img src="img/search-icon.png" alt="Search icon for business directory" class="input-icon search-icon" style="width:24px;height:24px;vertical-align:middle;margin-right:8px;">
                     </button>
                     <button class="menu-toggle">
                         <i class="fas fa-bars"></i>
