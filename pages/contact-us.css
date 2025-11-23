@@ -19,6 +19,16 @@ body {
 }
 
 /* Header */
+/* Logo image universal style */
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  margin: 0 auto;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.18));
+  transition: transform 0.2s;
+}
 .header {
   background: #1a1a1a;
   border-bottom: 1px solid #3c4043;

@@ -16,11 +16,13 @@
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo">
-                    <img src="../../img/logo.png" alt="business list" class="logo-img" onclick="window.location = '../../index.html'">
+                    <a href="../../index.html" class="logo-link" aria-label="BusinessList Home">
+                        <img src="../../img/logo.png" alt="BusinessList" class="logo-img">
+                    </a>
                 </div>
                 <nav class="nav-menu">
                     <a href="../sign-in.html" class="nav-link">Sign in</a>
-                    <button class="get-listed-btn" onclick="window.location = '/pages/create-business-listing.html'">Get Listed</button>
+                    <a href="../../pages/create-business-listing.html" class="get-listed-btn">Get Listed</a>
                     <button class="search-icon-btn">
                         <i class="fas fa-search"></i>
                     </button>
@@ -72,7 +74,7 @@
                 <div class="footer-column">
                     <h4>Users</h4>
                     <ul>
-                        <li><a href="/pages/create-business-listing.html">Get Listed</a></li>
+                        <li><a href="../../pages/create-business-listing.html" class="breadcrumb-link">Get Listed</a></li>
                         <li><a href="#">Remove Company</a></li>
                         <li><a href="/pages/sign-in.html">Sign in</a></li>
                     </ul>
@@ -84,7 +86,9 @@
                 </div>
                 <div class="footer-column footer-brand">
                     <div class="footer-logo">
-                        <img src="../../img/logo.png" alt="business list" class="logo-img" onclick="window.location = '/index.html'">
+                        <a href="../../index.html" class="logo-link" aria-label="BusinessList Home">
+                            <img src="../../img/logo.png" alt="BusinessList" class="logo-img">
+                        </a>
                     </div>
                     <p class="footer-description">
                         BusinessList.pk is Pakistan's online business directory, helping people discover local
